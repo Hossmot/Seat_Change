@@ -10,8 +10,6 @@ HMSP_StudentSeatNum = []
 HMSP_StudentNumber = []
 
 
-
-
 def Show_CS():
     for v in range(5):
         for h in range(5):
@@ -90,10 +88,8 @@ def VerticalShuffle(j):
     rd.shuffle(VerticalElementStorage)
     for a in range(5):
         Class_Seat[a][j-1] = VerticalElementStorage[a]
-
-
-
-
+        
+        
 def Main_1(i):
     if i == 1:
         BasicSetting()
@@ -124,10 +120,8 @@ def Main_2(i):
         exit()
 
 
-
 Engine = int(1)
 while (Engine == 1):
-
     Main_1(i=int(input("자리를 바꾸시려면 1, 고정 후 바꾸시려면 2를, 다음으로 넘어가시려면 3을 눌러주세요.")))
     Main_2(i=int(input("가로줄을 섞으시려면 1을, 세로줄을 섞으시려면 2를, 프로그램을 끝내시려면 3을 눌러주세요.")))
 
