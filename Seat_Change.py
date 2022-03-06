@@ -1,4 +1,5 @@
 import random as rd
+from turtle import goto
 
 Class_Seat = [[1, 2, 3, 4, 5],
              [6, 7, 8, 9, 10],
@@ -94,7 +95,9 @@ def Main_1(i):
         Show_CS()
     elif i == 3:
         pass
-
+    else:
+        print('올바른 수를 입력하여 주세요.')
+        Main_1(i=int(input("자리를 바꾸시려면 1, 고정 후 바꾸시려면 2를, 다음으로 넘어가시려면 3을 눌러주세요.")))
 
 def Main_2(i):
     if i == 1:
@@ -110,7 +113,12 @@ def Main_2(i):
             VerticalShuffle(j)
         Show_CS()
     if i == 3:
-        exit()
+        pass
+    if i == 4:
+        Engine = 0
+    else:
+        print('올바른 수를 입력하여 주세요.')  
+        Main_2(i=int(input("가로줄을 섞으시려면 1을, 세로줄을 섞으시려면 2를, 다음으로 넘어가시리면 3을,  프로그램을 끝내시려면 4을 눌러주세요.")))  
 
 
 
@@ -118,10 +126,7 @@ Engine = int(1)
 while (Engine == 1):
 
     Main_1(i=int(input("자리를 바꾸시려면 1, 고정 후 바꾸시려면 2를, 다음으로 넘어가시려면 3을 눌러주세요.")))
-    Main_2(i=int(input("가로줄을 섞으시려면 1을, 세로줄을 섞으시려면 2를, 프로그램을 끝내시려면 3을 눌러주세요.")))
+    Main_2(i=int(input("가로줄을 섞으시려면 1을, 세로줄을 섞으시려면 2를, 다음으로 넘어가시리면 3을,  프로그램을 끝내시려면 4을 눌러주세요.")))
     CS_Storage = []
     HMSP_StudentSeatNum = []
     HMSP_StudentNumber = []
-
-
-
